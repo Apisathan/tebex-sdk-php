@@ -62,10 +62,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'description' => 'string',
         'image' => 'string',
-<<<<<<< HEAD
-=======
         'media' => '\TebexHeadless\Model\Media[]',
->>>>>>> c39bf54 (Added media model)
         'type' => 'string',
         'category' => '\TebexHeadless\Model\PackageCategory',
         'base_price' => 'float',
@@ -93,10 +90,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'description' => null,
         'image' => null,
-<<<<<<< HEAD
-=======
         'media' => null,
->>>>>>> c39bf54 (Added media model)
         'type' => null,
         'category' => null,
         'base_price' => 'float',
@@ -122,10 +116,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => false,
         'description' => false,
         'image' => true,
-<<<<<<< HEAD
-=======
         'media' => false,
->>>>>>> c39bf54 (Added media model)
         'type' => false,
         'category' => false,
         'base_price' => false,
@@ -231,10 +222,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'description' => 'description',
         'image' => 'image',
-<<<<<<< HEAD
-=======
         'media' => 'media',
->>>>>>> c39bf54 (Added media model)
         'type' => 'type',
         'category' => 'category',
         'base_price' => 'base_price',
@@ -260,10 +248,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'description' => 'setDescription',
         'image' => 'setImage',
-<<<<<<< HEAD
-=======
         'media' => 'setMedia',
->>>>>>> c39bf54 (Added media model)
         'type' => 'setType',
         'category' => 'setCategory',
         'base_price' => 'setBasePrice',
@@ -289,10 +274,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'description' => 'getDescription',
         'image' => 'getImage',
-<<<<<<< HEAD
-=======
         'media' => 'getMedia',
->>>>>>> c39bf54 (Added media model)
         'type' => 'getType',
         'category' => 'getCategory',
         'base_price' => 'getBasePrice',
@@ -369,10 +351,7 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('image', $data ?? [], null);
-<<<<<<< HEAD
-=======
         $this->setIfExists('media', $data ?? [], null);
->>>>>>> c39bf54 (Added media model)
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
         $this->setIfExists('base_price', $data ?? [], null);
@@ -545,9 +524,6 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         return $this;
     }
 
-<<<<<<< HEAD
-=======
-
     /**
      * Gets media
      *
@@ -572,7 +548,6 @@ class Package implements ModelInterface, ArrayAccess, \JsonSerializable
         return $this;
     }
 
->>>>>>> c39bf54 (Added media model)
     /**
      * Gets type
      *
