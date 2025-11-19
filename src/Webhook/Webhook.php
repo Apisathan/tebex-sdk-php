@@ -110,7 +110,11 @@ class Webhook {
         $signature = $_SERVER["HTTP_X_SIGNATURE"];
 
         // decode the received json
+<<<<<<< HEAD
         $decodedJson = json_decode($json, true);
+=======
+        $decodedJson = json_decode($json, false);
+>>>>>>> c39bf54 (Added media model)
         if (!$decodedJson) {
             throw new ValueError("Invalid or malformed webhook JSON: " . $json);
         }
@@ -146,9 +150,13 @@ class Webhook {
         $webhook = new $webhookClass($webhookJsonStr);
 
         // validate the webhook's signature
+<<<<<<< HEAD
         if (!Webhooks::validateWebhookIp($webhook)) {
             throw new ApiException("Invalid webhook origin IP. It does not appear this request originated from a Tebex IP. If you are using a proxy, please ensure client IPs are forwarded appropriately.", 403);
         }
+=======
+        
+>>>>>>> c39bf54 (Added media model)
 
         $isSignatureValid = Webhooks::validateWebhookSignature($webhook, $signature);
         var_dump("VALID: ", $isSignatureValid);
@@ -249,6 +257,10 @@ class Webhook {
     public function validateSignature(string $expectedSignature, string $webhookSecret): bool
     {
         $calculatedSignature = hash_hmac('sha256', hash('sha256', $this->_encodedJson), $webhookSecret);
+<<<<<<< HEAD
+=======
+        dd([$calculatedSignature, $expectedSignature]);
+>>>>>>> c39bf54 (Added media model)
         $result = (strcmp($calculatedSignature, $expectedSignature) == 0);
         var_dump("Result: ", $result);
         return $result;

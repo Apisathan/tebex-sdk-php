@@ -2484,6 +2484,10 @@ class HeadlessApi
     public function getAllPackages($token, string $contentType = self::contentTypes['getAllPackages'][0])
     {
         list($response) = $this->getAllPackagesWithHttpInfo($token, $contentType);
+<<<<<<< HEAD
+=======
+
+>>>>>>> c39bf54 (Added media model)
         return $response;
     }
 
@@ -2502,11 +2506,18 @@ class HeadlessApi
     public function getAllPackagesWithHttpInfo($token, string $contentType = self::contentTypes['getAllPackages'][0])
     {
         $request = $this->getAllPackagesRequest($token, $contentType);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c39bf54 (Added media model)
         try {
             $options = $this->createHttpClientOption();
             try {
                 $response = $this->client->send($request, $options);
+<<<<<<< HEAD
+=======
+
+>>>>>>> c39bf54 (Added media model)
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
@@ -2561,6 +2572,10 @@ class HeadlessApi
                         }
                     }
 
+<<<<<<< HEAD
+=======
+                    dd(ObjectSerializer::deserialize($content, '\TebexHeadless\Model\PackageResponse', []));
+>>>>>>> c39bf54 (Added media model)
                     return [
                         ObjectSerializer::deserialize($content, '\TebexHeadless\Model\PackageResponse', []),
                         $response->getStatusCode(),
